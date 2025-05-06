@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Cosmic Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a4e);
+      color: #ffffff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 3s infinite;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 1.5rem;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #d3d3d3;
+    }
+
+    .orb {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ff6b6b, transparent);
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: drift 10s infinite linear;
+      pointer-events: none;
+    }
+
+    .orb:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, #4ecdc4, transparent);
+      animation-duration: 15s;
+      animation-delay: -5s;
+    }
+
+    .orb:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #ffd700, transparent);
+      animation-duration: 12s;
+      animation-delay: -2s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #a9a9a9;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(100vw, 100vh); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .card { width: 100%; max-width: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <header>
+    <h1>Cosmic Random Hub</h1>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h2>Quantum Widget</h2>
+      <p>Explore the mysteries of the universe with this quirky gadget!</p>
+    </div>
+    <div class="card">
+      <h2>Galactic Gizmo</h2>
+      <p>A device that vibes with the stars and cosmic waves.</p>
+    </div>
+    <div class="card">
+      <h2>Stellar Doodle</h2>
+      <p>Sketch your dreams under the light of distant galaxies.</p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Random Cosmic Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
